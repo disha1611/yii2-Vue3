@@ -1,0 +1,16 @@
+// test-api-collection.json
+{
+  "info": {
+    "name": "Product API Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Search Products",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/products/search?q=lap"
+      }
+    }
+  ]
+}

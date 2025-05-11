@@ -1,0 +1,13 @@
+// seed-products.json
+[
+  {
+    "name": "4K Monitor",
+    "price": 399.99,
+    "description": "27-inch 4K display"
+  },
+  {
+    "name": "Noise-Canceling Headphones",
+    "price": 299.50,
+    "description": "Wireless over-ear headphones"
+  }
+]

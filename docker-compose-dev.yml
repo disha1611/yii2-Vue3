@@ -1,0 +1,29 @@
+# docker-compose-dev.yml
+version: '3.8'
+
+services:
+  yii2-api:
+    image: php:8.2-apache
+    ports: ["8080:80"]
+    volumes:
+      - ./backend:/var/www/html
+    depends_on: [mysql]
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: yii2_app
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  vue-app:
+    image: node:18
+    working_dir: /app
+    ports: ["5173:5173"]
+    volumes:
+      - ./frontend:/app
+    command: ["npm", "run", "dev"]
+
+volumes:
+  mysql-data:
